@@ -1,0 +1,57 @@
+body {
+  background: #e25d5d;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Each photo box */
+.photo {
+  position: relative;
+  width: 180px;        /* ✅ Fixed width for uniform size */
+  height: 180px;       /* ✅ Fixed height for uniform size */
+  overflow: hidden;    /* ✅ Keeps image inside box */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image fits nicely inside */
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ✅ Keeps proportions without stretching */
+  border-radius: 10px;
+}
+
+/* Remove button (X) */
+.photo .remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+  transition: background 0.2s;
+}
+
+.photo .remove:hover {
+  background: red;
+}
