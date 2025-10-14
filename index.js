@@ -30,7 +30,7 @@ function showImage(src) {
     <img src="${src}" width="150">
     <button class="remove">X</button>
   `;
-
+ 
   div.querySelector(".remove").onclick = () => {
     div.remove();
     images = images.filter(x => x !== src);
